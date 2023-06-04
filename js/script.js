@@ -1,0 +1,31 @@
+const darkmodebtn = document.querySelector(".darkmode");
+const html = document.querySelector(".html");
+const divider = document.querySelector(".divider");
+const divider2 = document.querySelector(".divider2");
+const divider3 = document.querySelector(".divider3");
+const abouth1 = document.querySelector(".abouth1");
+const abouttext= document.querySelector(".abouttext");
+const webpageh1 = document.querySelector(".webpageh1");
+const webpagetext = document.querySelector(".webpagetext");
+const buyh1 = document.querySelector(".buyh1");
+const buytext = document.querySelector(".buytext");
+const menudarkmode = document.querySelector(".helpcontainer");
+const webpagebuttondark = document.querySelector(".webpagebutton");
+const buybuttondark = document.querySelector(".buybutton");
+
+darkmodebtn.addEventListener("click", () => {
+    darkmodebtn.classList.toggle("dark");
+    html.classList.toggle("dark");
+    divider.classList.toggle("dark");
+    divider2.classList.toggle("dark");
+    divider3.classList.toggle("dark");
+    abouth1.classList.toggle("dark");
+    abouttext.classList.toggle("dark");
+    webpageh1.classList.toggle("dark");
+    webpagetext.classList.toggle("dark");
+    buyh1.classList.toggle("dark");
+    buytext.classList.toggle("dark");
+    menudarkmode.classList.toggle("dark");
+    webpagebuttondark.classList.toggle("dark");
+    buybuttondark.classList.toggle("dark");
+});

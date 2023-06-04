@@ -1,244 +1,438 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+/* rgb(246,246,246)/ #E59F11 / #FEFEFE */
+/* font-family: 'Montserrat',sans-serif; */
+/* font-family: 'Roboto',sans-serif; */
+/* #3b547a */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap');
 
 html {
     scroll-behavior: smooth;
+    background-color: #FEFEFE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease;
+}
+
+.html.dark {
+    background-color: #2b3f5c;
 }
 
 body {
-    margin: 0px;
-    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 0px;
+}
+
+nav {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0px 0px 5px 5px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(3px);
 }
 
 header {
-    width: 100vw;
-    height: 100vh;
+    height: 500px;
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     align-items: center;
-}
-
-header .content {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    background-image: url(../img/img2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 0px 0px 5px 5px;
 }
 
-header .content .upper {
-    height: 80%;
-}
-
-header .content .upper h1 {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 20px;
-    margin: 0px;
-    margin-top: 10px;
-    border-radius: 5px;
-    color: white;
-}
-
-header .content .lower {
-    height: 20%;
+.rightside {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-header .content .lower span {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 10px;
+.leftside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Sotlogo {
+    aspect-ratio: 860/619;
+    width: 40px;
+}
+
+.img1 {
+    aspect-ratio: 7680/4320;
+    width: 100%;
     border-radius: 5px;
-    color: white;
 }
 
-header .content .transition {
-    width: 100vw;
-    aspect-ratio: 1000/100;
-    background-image: url(../transition/layered-waves-haikei\ \(7\).svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.container {
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    backdrop-filter: blur(3px);
 }
 
-header video {
+.container h1 {
+    font-family: 'Montserrat',sans-serif;
+    font-size: xx-large;
+    color: #FEFEFE;
+}
+
+.buybtnheader {
+    border: none;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    color: #FEFEFE;
+    font-size: larger;
+    cursor: pointer;
+    border: 2px solid #FEFEFE;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: .1s ease;
+}
+
+.buybtnheader:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    transform: scale(1.1);
+}
+
+.leftside h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #FEFEFE;
+}
+
+.homebtn, .thegamebtn, .webpagebtn, .buybtn {
+    font-family: 'Montserrat', sans-serif;
+    color: #FEFEFE;
+    background-color: transparent;
+    border: none;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.homebtn::after, .thegamebtn::after, .webpagebtn::after, .buybtn::after {
+    content: '';
+    background-color: #FEFEFE;
+    width: 100%;
+    height: 3px;
+    border-radius: 1.5px;
+    transition: transform .2s ease;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+}
+
+.homebtn:hover::after, .thegamebtn:hover::after, .webpagebtn:hover::after, .buybtn:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.divider, .divider2, .divider3 {
+    height: 4px;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #cbcbcb;
+    border-radius: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: .2s ease;
+}
+
+.about h1 {
+    font-family: 'Montserrat',sans-serif;
+    color: #1c1c1c;
+}
+
+.about p {
+    font-family: 'Roboto', sans-serif;
+    color: #1c1c1c;
+    font-size: larger;
+}
+
+.darkmode {
+    width: 32px;
+    height: 32px;
+    margin: 8px 12px;
+    border: none;
+    background-color: transparent;
+    background-image: url(../svg/dark_mode_FILL0_wght300_GRAD-25_opsz48.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: .2s ease;
+}
+
+.darkmode::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: #FEFEFE;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform .2s ease;
+    transform: scaleX(0);
+}
+
+.darkmode:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+.darkmode.dark {
+    background-image: url(../svg/light_mode_FILL0_wght300_GRAD-25_opsz48.svg);
+}
+.abouth1 {
+    transition: .2s ease;
+}
+.abouttext {
+    transition: .2 ease;
+}
+.webpageh1 {
+    transition: .2 ease;
+    font-family: 'Montserrat', sans-serif;
+    color: #1c1c1c;
+}
+.webpagetext {
+    transition: .2 ease;
+    font-family: 'Roboto', sans-serif;
+    color: #1c1c1c;
+    font-size: larger;
+}
+.buyh1 {
+    transition: .2 ease;
+    font-family: 'Montserrat', sans-serif;
+    color: #1c1c1c;
+}
+.buytext {
+    transition: .2s ease;
+    font-family: 'Roboto', sans-serif;
+    color: #1c1c1c;
+    font-size: larger;
+}
+
+.divider.dark, .divider2.dark, .divider3.dark {
+    background-color: #3b547a;
+}
+.abouth1.dark {
+    color: #FEFEFE;
+}
+.abouttext.dark {
+    color: #FEFEFE;
+}
+.webpageh1.dark {
+    color: #FEFEFE;
+}
+.webpagetext.dark {
+    color: #FEFEFE;
+}
+.buyh1.dark {
+    color: #FEFEFE;
+}
+.buytext.dark {
+    color: #FEFEFE;
+}
+
+.responsivebtn {
+    width: 32px;
+    height: 32px;
+    padding: 8px 12px;
+    background-image: url(/svg/menu_FILL0_wght400_GRAD0_opsz48.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    transition: .2s ease;
+    position: relative;
+    margin: 8px 12px;
+}
+
+.responsivebtn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fefefe;
+    width: 100%;
+    display: block;
+    height: 3px;
+    border-radius: 1.5px;
+    transform-origin: bottom right;
+    transition: transform .2s ease;
+    transform: scaleX(0);
+}
+
+.responsivebtn:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.responsivebtn.active {
+    background-image: url(../svg/close_FILL0_wght400_GRAD0_opsz48.svg);
+}
+
+.responsivemenu {
+    display: none;
+    transition: .2s ease;
+}
+
+.responsivemenu.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff30;
+    backdrop-filter: blur(3px);
+    z-index: 998;
+}
+
+.helpcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fefefe;
+    padding: 60px;
+    max-width: 400px;
+    max-height: 500px;
+    border-radius: 5px;
+    transition: .2s ease;
+}
+
+.helpcontainer a button {
+    color: #1c1c1c;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    background-color: transparent;
+    padding: 8px 12px;
+    position: relative;
+} 
+
+.helpcontainer.dark a button {
+    color: #FEFEFE;
+}
+
+.helpcontainer a button::after {
+    content: '';
+    background-color: #1c1c1c;
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 1.5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform .2s ease;
+    transform-origin: bottom right;
+}
+
+.helpcontainer.dark a button::after {
+    background-color: #FEFEFE;
+}
+
+.helpcontainer a button:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+.helpcontainer.dark {
+    background-color: #2b3f5c;
+}
+
+.webpagebutton, .buybutton {
+    color: #1c1c1c;
+    border: none;
+    font-family: 'Sontserrat', sans-serif;
+    font-size: larger;
+    background-color: transparent;
+    padding: 8px 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+.webpagebutton.dark, .buybutton.dark {
+    color: #FEFEFE;
+}
+
+.webpagebutton.dark:hover, .buybutton.dark:hover {
+    color: #1c1c1c;
+}
+
+.webpagebutton::after, .buybutton::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 0%;
+    background-color: #1c1c1c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     z-index: -1;
-    object-fit: cover;
-    height: 100vh;
-    width: 100vw;
-}
-
-main .content {
-    height: 100vh;
-    width: 100vw;
-    background-color: #6b6b6b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-main .content h1 {
-    font-size: xx-large;
-}
-
-main .content p {
-    font-size: xx-large;
-    margin: 50px;
-}
-
-main .content a {
-    color: white;
-    text-decoration: none;
-    padding: 20px;
-    font-size: xx-large;
-    border-radius: 5px;
-    border: 1px solid whitesmoke;
-    transition-duration: 0.3s;
-}
-
-main .content a:hover {
-    color: black;
-    background-color: whitesmoke;
-    border: 1px solid #6b6b6b;
-}
-
-main .transition2 {
-    aspect-ratio: 1000/100;
-    background-image: url(../transition/layered-waves-haikei\ \(9\).svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-main .content2 {
-    background-color: #132736;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-main .content2 h1 {
-    font-size: xx-large;
-    color: white;
-}
-
-main .content2 p {
-    color: white;
-    font-size: xx-large;
-    margin: 50px;
-}
-
-main .content2 a {
-    color: white;
-    text-decoration: none;
-    padding: 20px;
-    font-size: xx-large;
-    border-radius: 5px;
-    border: 1px solid whitesmoke;
-    transition-duration: 0.3s;
-}
-
-main .content2 a:hover {
-    color: black;
-    background-color: whitesmoke;
-    border: 1px solid #132736;
-}
-
-main .transition3 {
-    aspect-ratio: 1000/100;
-    width: 100vw;
-    background-image: url(../transition/layered-waves-haikei\ \(10\).svg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-main .content3 {
-    height: 100vh;
-    width: 100vw;
-    background-color: #F7770F;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-main .content3 h1 {
-    font-size: xx-large;
-    color: black;
-}
-
-main .content3 p {
-    color: black;
-    font-size: xx-large;
-    margin: 50px;
-}
-
-main .transition4 {
-    background-image: url(../transition/layered-waves-haikei\ \(11\).svg);
-    aspect-ratio: 1000/100;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 150px;
-    background-color: #009473;
-}
-
-footer a {
-    text-decoration: none;
-    color: white;
-    padding: 20px;
+    transition:.2s ease-in-out;
     border-radius: 5px;
 }
 
-footer a:hover {
-    background-color: #006a53;
+.webpagebutton.dark::after, .buybutton.dark::after {
+    background-color: #FEFEFE;
 }
 
-@media only screen and (max-width:1110px) {
-    main .content p, main .content2 p, main .content3 p {
-        font-size: x-large;
-    }
+.webpagebutton:hover, .buybutton:hover {
+    color: white;
 }
 
-@media only screen and (max-width:750px) {
-    main .content p, main .content2 p, main .content3 p {
-        font-size: large;
-    }
+.webpagebutton:hover::after, .buybutton:hover::after {
+    width: 100%;
+    height: 100%;
 }
 
-@media only screen and (max-width:590px) {
-    main .content p, main .content2 p, main .content3 p {
-        font-size: medium;
-    }
-    footer {
-        display: flex;
-        flex-direction: column;
-        height: auto;
+@media (max-width:600px) {
+    .leftside {
+        display: none;
     }
 }
 
-@media only screen and (max-width:400px) {
-    main .content a, main .content2 a {
-        font-size: large;
+@media (min-width:376px) {
+    .responsivebtn {
+        display: none;
     }
-    main .content h1, main .content2 h1, main .content3 h1 {
-        font-size: large;
+}
+
+@media (max-width:375px) {
+    .homebtn, .thegamebtn, .webpagebtn, .buybtn {
+        display: none;
+    }
+    .leftside {
+        display: none;
     }
 }
